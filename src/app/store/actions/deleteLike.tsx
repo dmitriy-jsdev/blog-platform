@@ -1,0 +1,38 @@
+import { UNSET_LIKE, SET_ERROR } from './constantsActions';
+import type { AppDispatch } from '../store';
+import { API_BASE_URL } from '../../../shared/config/api';
+
+type LikeResponse = {
+  article: {
+    slug: string;
+    favorited: boolean;
+    favoritesCount: number;
+  };
+};
+
+export const deleteLike =
+  (slug: string, token?: string) =>
+  async (dispatch: AppDispatch): Promise<void> => {
+    try {
+      const response = await fetch(
+        `${API_BASE_URL}/articles/${slug}/favorite`,
+        {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Token ${token ?? ''}`,
+          },
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error(`Ошибка: ${response.status}`);
+      }
+
+      const data = (await response.json()) as LikeResponse;
+      dispatch({ type: UNSET_LIKE, payload: data });
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      dispatch({ type: SET_ERROR, payload: message });
+    }
+  };
