@@ -1,0 +1,330 @@
+.article {
+  display: flex;
+  justify-content: space-between;
+  max-width: 938px;
+  margin: 26px auto 0;
+  padding: 15px 14px 24px 16px;
+  background: #FFFFFF;
+}
+
+.articleData {
+  width: 682px;
+}
+
+.titleWrap {
+  display: flex;
+  align-items: flex-start;
+}
+
+.titleArticle {
+  margin-right: 13px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #1890FF;
+  max-width: 682px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.likeWrap {
+  display: flex;
+}
+
+.buttonLike {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.likeImg {
+  margin-right: 5px;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  max-width: 682px;
+  gap: 8px;
+}
+
+.tag {
+  max-width: 200px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid #00000080;
+  color: #000000BF;
+  padding: 2px 6px 3px 5px;
+  margin-right: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tagList::after,
+.long-tag::after {
+  content: '...';
+  white-space: nowrap;
+  visibility: hidden;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.authorData {
+  display: flex;
+  height: 46px;
+}
+
+.dataWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 12px;
+}
+
+.likeCount {
+  font-size: 12px;
+  line-height: 28px;
+  color: #000000BF;
+}
+
+.nameAuthor {
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000D9;
+}
+
+.articleDate {
+  font-size: 12px;
+  line-height: 22px;
+  color: #00000080;
+}
+
+.avatarImg {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  text-transform: uppercase;
+  color: red;
+}
+
+.wrapButtons {
+  display: flex;
+  height: 31.1px;
+  margin-top: 30px;
+}
+
+.buttonDelete {
+  font-family: Inter;
+  width: 78px;
+  font-size: 14px;
+  line-height: 22px;
+  height: 31.1px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #F5222D;
+  border: 1px solid #F5222D;
+  cursor: pointer;
+}
+
+.buttonDelete:hover {
+  box-shadow: 0px 1px 2px #F5222D;
+}
+
+.buttonDelete:active {
+  background: #F5222D;
+  color: #FFFFFF;
+  transform: scale(0.97);
+}
+
+.linkEdit {
+  display: block;
+  width: 65.23px;
+  height: 31.1px;
+  font-size: 14px; 
+  line-height: 31.1px;
+  margin-left: 12px;
+  border-radius: 5px;
+  border: 1px solid #52C41A;
+  box-sizing: border-box;
+  color: #52C41A;
+  text-align: center;
+}
+
+.linkEdit:hover {
+  box-shadow: 0px 1px 2px #52C41A;
+}
+
+.linkEdit:active {
+  background: #52C41A;
+  color: #FFFFFF;
+  transform: scale(0.97);
+}
+
+@media (max-width: 768px) {
+  .article {
+    margin: 20px 8px 0;
+  }
+
+  .articleData {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .article {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .articleData {
+    width: 100%;
+    order: 2;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    order: 1;
+    margin-bottom: 12px;
+  }
+
+  .wrapButtons {
+    margin: 0;
+  }
+
+  .titleArticle {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .tag {
+    font-size: 10px;
+    height: auto;
+    padding: 3px 5px;
+    margin-right: 8px;
+
+  }
+
+  .tagList::after {
+    content: none;
+    display: none;
+  }
+
+  .descrArticle {
+    font-size: 12px;
+  }
+
+  .likeImg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .likeCount {
+    font-size: 10px;
+  }
+
+  .articleDate {
+    font-size: 8px;
+    line-height: 0;
+  }
+
+  .nameAuthor {
+    font-size: 14px;
+  }
+
+  .avatarImg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .buttonDelete {
+    width: 60px;
+    font-size: 12px;
+    line-height: 20px;
+    height: 28px;
+  }
+
+  .linkEdit {
+    width: 60px;
+    font-size: 12px;
+    line-height: 27px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 375px) {
+  .titleArticle {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .tagList {
+    margin: 4px 0 12px;
+    gap: 6px 0;
+  }
+
+  .tag {
+    font-size: 8px;
+    padding: 2px 4px;
+  }
+
+  .descrArticle {
+    font-size: 10px;
+  }
+
+  .likeCount {
+    font-size: 8px;
+  }
+
+  .likeImg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .articleDate {
+    font-size: 6px;
+  }
+
+  .nameAuthor {
+    font-size: 12px;
+  }
+  
+  .avatarImg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .buttonDelete {
+    width: 55px;
+    font-size: 10px;
+    line-height: 18px;
+    height: 28px;
+  }
+
+  .linkEdit {
+    width: 55px;
+    font-size: 10px;
+    line-height: 26px;
+    height: 28px;
+  }
+}

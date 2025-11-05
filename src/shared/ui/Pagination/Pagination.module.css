@@ -1,0 +1,58 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.btn {
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:active {
+  transform: scale(0.97);
+  opacity: 0.8;
+}
+
+.btn:hover:not(.active) {
+  background-color: #e3e1f6;
+}
+
+.arrow {
+  width: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inactiveArrow {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.inactiveArrow:hover {
+  opacity: 0.35;
+}
+
+.inactiveArrow:active {
+  transform: scale(1);
+}
+
+.active {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.disabled {
+  display: none;
+}

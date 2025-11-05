@@ -1,0 +1,34 @@
+.articlesList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 32px;
+}
+
+.error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  text-transform: uppercase;
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .articlesList {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .articlesList {
+    padding: 0 22px;
+  }
+}
+
+@media (max-width: 375px) {
+  .articlesList {
+    padding: 0 20px;
+  }
+}

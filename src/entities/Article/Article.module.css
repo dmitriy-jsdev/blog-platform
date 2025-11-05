@@ -1,0 +1,240 @@
+.article {
+  display: flex;
+  justify-content: space-between;
+  width: 938px;
+  margin-top: 26px;
+  padding: 16px 16px 24px;
+  background: #FFFFFF;
+}
+
+.articleData {
+  width: 682px;
+}
+
+.titleWrap {
+  display: flex;
+}
+
+.titleArticle {
+  margin-right: 13px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0em;
+  color: #1890FF;
+  max-width: 682px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.titleArticle:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.titleArticle:active {
+  opacity: 0.8;
+  transform: scale(0.99);
+}
+
+.likeImg {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.tagList {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  max-width: 682px;
+  overflow: hidden;
+}
+
+.tag {
+  max-width: 200px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid #00000080;
+  color: #000000BF;
+  padding: 3px 5px;
+  margin-right: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing:content-box;
+}
+
+.tagList::after,
+.long-tag::after {
+  content: '...';
+  white-space: nowrap;
+  visibility: hidden;
+}
+
+.descrArticle {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.authorData {
+  display: flex;
+  height: 46px;
+}
+
+.dataWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 12px;
+}
+
+.titleArticle {
+  text-decoration: none;
+}
+
+.buttonLike {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.likeCount {
+  font-size: 12px;
+  line-height: 28px;
+  color: #000000BF;
+}
+
+.nameAuthor {
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000D9;
+}
+
+.articleDate {
+  font-size: 12px;
+  line-height: 22px;
+  color: #00000080;
+}
+
+.avatarImg {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .article {
+    width: 100%;
+  }
+
+  .articleData {
+    width: 65%;
+  }
+}
+
+@media (max-width: 480px) {
+  .article {
+    padding: 12px;
+  }
+
+  .articleData {
+    width: 60%;
+  }
+
+  .titleArticle {
+    font-size: 16px;
+  }
+
+  .tagList {
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 8px 0;
+    overflow: hidden;
+  }
+
+  .tag {
+    font-size: 10px;
+    height: auto;
+    padding: 3px 5px;
+    margin-right: 8px;
+
+  }
+
+  .tagList::after {
+    content: none;
+    display: none;
+  }
+
+  .descrArticle {
+    font-size: 12px;
+  }
+
+  .likeImg {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+  }
+
+  .likeCount {
+    font-size: 10px;
+  }
+
+  .articleDate {
+    font-size: 8px;
+  }
+
+  .nameAuthor {
+    font-size: 14px;
+  }
+
+  .avatarImg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 375px) {
+  .titleArticle {
+    font-size: 12px;
+  }
+
+  .tagList {
+    margin: 4px 0 12px;
+    gap: 6px 0;
+  }
+
+  .tag {
+    font-size: 8px;
+    padding: 2px 4px;
+  }
+
+  .descrArticle {
+    font-size: 10px;
+  }
+
+  .likeCount {
+    font-size: 8px;
+  }
+
+  .likeImg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .articleDate {
+    font-size: 6px;
+  }
+
+  .nameAuthor {
+    font-size: 12px;
+  }
+  
+  .avatarImg {
+    width: 28px;
+    height: 28px;
+  }
+}

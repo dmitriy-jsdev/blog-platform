@@ -1,0 +1,230 @@
+.header {
+  display: flex;
+  height: 80px;
+  padding: 0 22px;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+}
+
+.blogName {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000000D9;
+}
+
+.blogName:hover,
+.signIn:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.authWrap {
+  display: flex;
+  align-items: center;
+}
+
+.signIn {
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000D9;
+  margin-right: 19px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.blogName:active,
+.signIn:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+.signUp {
+  padding: 10px 18px;
+  font-size: 18px;
+  line-height: 28px;
+  border: 1px solid #52C41A;
+  border-radius: 5px;
+  color: #52C41A;
+  background: none;
+  cursor: pointer;
+}
+
+.signUp:hover {
+  box-shadow: 0px 1px 2px rgba(82, 196, 26, 0.5);
+  opacity: 0.9;
+}
+
+.signUp:active {
+  background: #52C41A;
+  color: #FFFFFF;
+  transform: scale(0.97);
+}
+
+.createArticle {
+  width: 112.23px;
+  height: 31.1px;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #52C41A;
+  background: none;
+  box-sizing:border-box;
+  color: #52C41A;
+  cursor: pointer;
+}
+
+.createArticle:hover {
+  box-shadow: 0px 1px 2px #52C41A;
+}
+
+.createArticle:active {
+  background: #52C41A;
+  color: #FFFFFF;
+  transform: scale(0.97);
+}
+
+.username {
+  margin-left: 26px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000D9;
+}
+
+.username:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.username:active {
+  opacity: 0.8;
+  transform: scale(0.99);
+}
+
+.userImage {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  margin-left: 13px;
+}
+
+.logout {
+  margin-left: 27px;
+  width: 109px;
+  height: 51px;
+  border-radius: 5px;
+  border: 1px solid #000000BF;
+  background: none;
+  cursor: pointer;
+}
+
+.logout:hover {
+  box-shadow: 0px 1px 2px #000000BF;
+}
+
+.logout:active {
+  background: #000000BF;
+  color: #FFFFFF;
+  border: 1px solid #000000;
+  box-shadow: inset 0px 1px 2px #000000;
+  transform: scale(0.97);
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 60px;
+    padding: 0 12px;
+  }
+
+  .createArticle {
+    width: 80px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 10px;
+    padding: 4px;
+  }
+
+  .blogName {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .username {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .userImage {
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+  }
+
+  .signIn {
+    font-size: 14px;
+  }
+
+  .signUp {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
+  .logout {
+    width: 80px;
+    height: 35px;
+    font-size: 10px;
+    line-height: 10px;
+    padding: 4px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    height: 50px;
+    padding: 0 10px;
+  }
+
+  .createArticle {
+    width: 70px;
+    height: 18px;
+    font-size: 8px;
+    line-height: 9px;
+    text-align: center;
+    padding: 3px;
+  }
+
+  .blogName {
+    font-size: 12px;
+    margin-right: 8px;
+  }
+
+  .username {
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  .userImage {
+    width: 28px;
+    height: 28px;
+  }
+
+  .signIn {
+    font-size: 12px;
+  }
+
+  .signUp {
+    font-size: 12px;
+    padding: 0 6px;
+  }
+
+  .logout {
+    width: 70px;
+    height: 33px;
+    font-size: 8px;
+    line-height: 8px;
+    padding: 3px;
+    margin-left: 8px;
+  }
+}
